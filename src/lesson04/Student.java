@@ -37,10 +37,13 @@ public class Student {
 //		на минималния успех подаден като параметър (min) и ако възрастта му е под 30 години.
 //		Метода връща текущите пари на студента (след евентуалното им увеличение
 		}
-		double receiveScholarship(double min, double amount){
-			if(grade >=min && age <30){
+		double receiveScholarship(double minGradeForSchollarship, double amount){
+			if(grade >=minGradeForSchollarship && age <30){
 				money +=amount;
 				return money;
+			}else if(grade < minGradeForSchollarship || age >= 30){
+				System.out.println("You do not have the grade or you are too old for a scholarship ");
+				System.out.println("Yur grade is: "+this.grade+" " + " Your age is: " + this.age);
 			}
 			return money;
 		

@@ -4,6 +4,7 @@ public class StudentGroup {
 	String groupSubject; // – специалност на студентите в групата
 	Student[] students; // – Масив със Студенти в групата
 	int freePlaces; // – свободни места в групата
+	Student student;
 
 	// Класът да дефинира следните конструктори:
 	// -конструктор по подразбиране който създава места за 5 студента в групата
@@ -18,9 +19,9 @@ public class StudentGroup {
 
 	// -констуктор StudentGroup(String subject) които първо извиква конструктора
 	// по подразбиране и задава стойност на полето groupSubject
-	public StudentGroup(String subject) {
+	public StudentGroup(String groupSubject) {
 		this();
-		this.groupSubject = subject;
+		this.groupSubject = groupSubject;
 	}
 
 	// Класът да дефинира следните методи:
@@ -30,15 +31,18 @@ public class StudentGroup {
 	// ако има свободни места.
 	// След добавяне на студент към групата да се намалят свободните места в
 	// групата.
+	int index =0;
 	void addStudent(Student s) {
-		int index =0;
-		if (students.length-1 < 5) {
-			students[index] = new Student();
+		if (students.length-1 < 4) {
+			students[index] = s;
+			System.out.println("Student "+s + "is added to the group " + this.groupSubject +" at pisition No " + index);
 			
 			index++;
+			System.out.println("there are " + (5-index)+ "free positions in group "+ this.groupSubject);
 
+		}else{
+			System.out.println("The group is Full");
 		}
-		s = new Student();
 
 	}
 
@@ -47,6 +51,7 @@ public class StudentGroup {
 	// freePlaces.
 	void emptyGroup() {
 		students = new Student[5];
+		System.out.println("Create new group for 5 students");
 
 	}
 
