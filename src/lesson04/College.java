@@ -50,7 +50,7 @@ public class College {
 		
 		
 		//Not working method again :(
-		biologyGroup.theBestStudent(irina, 5.5, "Irina");
+		biologyGroup.theBestStudent(irina, 5.5);
 		
 		
 	}

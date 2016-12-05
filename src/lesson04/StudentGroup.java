@@ -33,8 +33,8 @@ public class StudentGroup {
 	// групата.
 	int index =0;
 	void addStudent(Student s) {
-		if (students.length-1 < 4) {
-			students[index] = s;
+		if (this.students.length-1 < 4) {
+			this.students[index] = s;
 			System.out.println("Student "+s + "is added to the group " + this.groupSubject +" at pisition No " + index);
 			
 			index++;
@@ -57,8 +57,8 @@ public class StudentGroup {
 
 	// -метод theBestStudent() - Връща името на студента с най-висок успех в
 	// групата.
-	String theBestStudent(Student student, double grade, String name) {
-		for (Student st : students) {
+	String theBestStudent(Student student, double grade) {
+		for (Student st : this.students) {
 			if (student.grade > st.grade) {
 				return student.name + "Has the highest grade";
 			}
