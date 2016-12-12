@@ -10,7 +10,7 @@ public class Task03List {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		List ls = new ArrayList();
+		List<Integer> ls = new ArrayList<Integer>();
 		
 		System.out.println("Enter value: ");
 		int nextInt=sc.nextInt();
@@ -24,7 +24,7 @@ public class Task03List {
 			sum = oldIndex +currentInt;
 			ls.add(sum);
 			currentInt = sum;
-			oldIndex=(int)ls.get(i-1);
+			oldIndex=ls.get(i-1);
 			
 			
 //			array[i]=arrayCurrent+arrayOldValue;
